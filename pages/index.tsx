@@ -8,7 +8,7 @@ const Home: NextPage = () => {
   return (
     <>
     <div>
-      Initial commit
+      Initial commit...
     </div>
     <Famous/>
     </>
