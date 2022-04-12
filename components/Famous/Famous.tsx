@@ -1,8 +1,9 @@
 import React from 'react'
+import { Wrapper } from './style'
 
 const Famous = () => {
   return (
-    <div>Famous</div>
+    <Wrapper>Famous</Wrapper>
   )
 }
 
