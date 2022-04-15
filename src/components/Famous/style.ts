@@ -1,11 +1,15 @@
 import styled, { keyframes } from "styled-components";
 
-export const Background = styled.div`
+type vhState = {
+  vh: string;
+};
+export const Background = styled.div<vhState>`
+  position: relative;
   background-image: linear-gradient(
     var(--backgroundsecondary),
-    var(--backgroundprimary)
+   transparent
   );
-  height: calc(var(--vh, 1vh) * 100);
+  height: ${({ vh }) => `calc(${vh} * 100)`};
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -21,13 +25,7 @@ export const Wrapper = styled.div`
   flex: 1;
   & div {
     color: var(--textprimary);
-    flex: 1;
     text-align: center;
-  }
-  & div:nth-child(1) {
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
   @media (max-width: 720px) {
     flex-direction: column;
@@ -65,4 +63,10 @@ export const Text1 = styled.span`
   color: var(--textheighlight);
   font-weight: 600;
   font-size: 2.2rem;
+`;
+
+export const ThemeWrapper = styled.div`
+  position: absolute;
+  top: 0.7rem;
+  right: 0.7rem;
 `;
