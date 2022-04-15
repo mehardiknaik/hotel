@@ -12,7 +12,7 @@ import FamousData from "../../data/FamousData";
 import { Container } from "../../../styles/container";
 import DownArrow from "../../svg/DownArrow";
 import { useTheme } from "../../providers/ThemeProviders";
-
+import Image from "next/image";
 
 const Famous = () => {
   const { image, text1, text2 } = FamousData;
@@ -41,12 +41,17 @@ const Famous = () => {
 
   return (
     <Background vh={vh}>
-      <ThemeWrapper onClick={() => setTheme(theme === "light" ? "dark" : "light")}>
-        <img src={`/hotel/${theme === "light"?'moon':'sun'}.svg`} width="20px"/>
+      <ThemeWrapper
+        onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+      >
+        <img
+          src={`/${theme === "light" ? "moon" : "sun"}.svg`}
+          width="20px"
+        />
       </ThemeWrapper>
       <Wrapper as={Container}>
         <ImageWrapper>
-          <img src={image} alt={text1} width="100%" loading="lazy" />
+          <Image src={image} alt={text1} width="100%"  height="100%" loading="lazy" />
         </ImageWrapper>
         <TextWrapper>
           We are Famous For <Text1>{text1}</Text1>, {text2}
@@ -58,5 +63,6 @@ const Famous = () => {
     </Background>
   );
 };
+
 
 export default Famous;

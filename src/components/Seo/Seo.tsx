@@ -7,7 +7,7 @@ const Seo = () => {
     <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     <meta property="og:title" content="Hotel" key="title" />
     <meta name="theme-color" content="#FFF" />
-    <link rel="shortcut icon" href="/hotel/favicon.ico"></link>
+    <link rel="shortcut icon" href="/favicon.ico"></link>
     <meta
       name="description"
       content="Hotel with details"

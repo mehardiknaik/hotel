@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Container } from "../../../styles/container";
-import { FooterData } from "../../data/FooterData";
+import { CreditMsg, FooterData } from "../../data/FooterData";
 import { Credit, FooterContainer, Wrapper } from "./styled";
 
 const Footer = () => {
@@ -8,7 +8,6 @@ const Footer = () => {
 
   const DataHandle = () => {
     let newData: any = FooterData.map((a) => Object.entries(a)[0]);
-    console.log(newData);
     setData(newData);
   };
   useEffect(() => {
@@ -25,7 +24,7 @@ const Footer = () => {
             </>
           ))}
         </FooterContainer>
-        <Credit>Made with ❤ by Hardik</Credit>
+        <Credit>{CreditMsg}</Credit>
       </Container>
     </Wrapper>
   );

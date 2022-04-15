@@ -8,3 +8,5 @@ export const FooterData = [
       "Phone No":"9123456789"
   },
 ];
+
+export const CreditMsg="Made with ❤ by Hardik"
