@@ -5,10 +5,7 @@ type vhState = {
 };
 export const Background = styled.div<vhState>`
   position: relative;
-  background-image: linear-gradient(
-    var(--backgroundsecondary),
-   transparent
-  );
+  background-image: linear-gradient(var(--backgroundsecondary), transparent);
   height: ${({ vh }) => `calc(${vh} * 100)`};
   width: 100%;
   display: flex;
@@ -54,10 +51,18 @@ const image = keyframes`
 
 export const ImageWrapper = styled.div`
   animation: ${image} 3s infinite linear;
+  position: relative;
+  flex:1;
+  height: 100%;
+  width:100%;
+  @media (max-width: 720px) {
+    height: 50%;
+  }
 `;
 
 export const TextWrapper = styled.div`
   font-size: 2rem;
+  flex:1;
 `;
 export const Text1 = styled.span`
   color: var(--textheighlight);
@@ -69,4 +74,5 @@ export const ThemeWrapper = styled.div`
   position: absolute;
   top: 0.7rem;
   right: 0.7rem;
+  z-index:10;
 `;

@@ -51,7 +51,7 @@ const Famous = () => {
       </ThemeWrapper>
       <Wrapper as={Container}>
         <ImageWrapper>
-          <Image src={image} alt={text1} width="100%"  height="100%" loading="lazy" />
+          <Image src={image} alt={text1} loading="lazy" layout="fill" objectFit="contain"/>
         </ImageWrapper>
         <TextWrapper>
           We are Famous For <Text1>{text1}</Text1>, {text2}
