@@ -20,12 +20,12 @@ const Home: NextPage = (props:any) => {
 };
 
 
-export const getServerSideProps: GetServerSideProps = async () => {
-  const res = await fetch(`http://localhost:3000/api/hello`);
-  const data = await res.json();
-  return {
-    props: { data }, // will be passed to the page component as props
-  };
-}
+// export const getServerSideProps: GetServerSideProps = async () => {
+//   const res = await fetch(`http://localhost:3000/api/hello`);
+//   const data = await res.json();
+//   return {
+//     props: { data }, // will be passed to the page component as props
+//   };
+// }
 
 export default Home;
